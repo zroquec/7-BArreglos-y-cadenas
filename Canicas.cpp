@@ -1,9 +1,10 @@
 #include <iostream>
 using namespace std;
 
+int cont[1000000]={0};
+
 int main(){
     int N,C,c;
-    int cont[1000000]={0};
     cin>>N;
     cin>>C;
 
@@ -13,4 +14,9 @@ int main(){
             cont[c-1]++;
         }
     }
+
+    for(int i=0; i<N; i++){
+        cout<<cont[i]<<'\n';
+    }
+    return 0;
 }
