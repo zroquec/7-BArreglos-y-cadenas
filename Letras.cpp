@@ -11,6 +11,18 @@ int main() {
         n++;
     }
 
+    for (int i = 0; i < n - 1; i++) {
+        if (texto[i] >= 'a' && texto[i] <= 'z') {
+            for (int j = i + 1; j < n; j++) {
+                if (texto[j] >= 'a' && texto[j] <= 'z' && texto[i] > texto[j]) {
+                    char temp = texto[i];
+                    texto[i] = texto[j];
+                    texto[j] = temp;
+                }
+            }
+            
+        }
+    }
     
 
     for (int i = 0; i < n; i++) {
